@@ -1,39 +1,55 @@
 # Setup
 
-* rails new media-app -c tailwind -d postgresql -T
+<details>
+  <summary>Algoritm</summary>
+  
+  * rails new media-app -c tailwind -d postgresql -T
 
-* ./bin/rails tailwindcss:build
+  * ./bin/rails tailwindcss:build
+  
+   alternative
 
-* rails new media-app -j esbuild -d postgresql -T
+  * rails new media-app -j esbuild -d postgresql -T
 
-* ./bin/bundle add tailwindcss-rails
+  * ./bin/bundle add tailwindcss-rails
 
-* ./bin/rails tailwindcss:install
+  * ./bin/rails tailwindcss:install
 
-* redis-server --daemonize yes
+  * redis-server --daemonize yes
 
-* yarn install --check-files
+  * yarn install --check-files
 
-* redis-server --daemonize yes
+  * redis-server --daemonize yes
 
-* bundle add devise
+  * bundle add devise
 
-* ./bin/rails generate devise:install
+  * ./bin/rails generate devise:install
 
-* rails generate devise User
+  * rails generate devise User
 
-* bin/rails action_text:install
+  * bin/rails action_text:install
 
-* ./bin/rails g scaffold Post title body:rich_text user:references
+  * ./bin/rails g scaffold Post title body:rich_text user:references
 
-* bundle add faker --group "development"
+  * bundle add faker --group "development"
 
-* bundle
+  * bundle
 
-* ./bin/rails db:reset
+  * ./bin/rails db:reset
 
-* ./bin/rails db:migrate
+  * ./bin/rails db:migrate
 
-*  ./bin/rails db:seed
+  *  ./bin/rails db:seed
 
-* bin/dev
+  * bin/dev
+
+</details>
+
+<details>
+ <summary>Video</summary>
+ 
+  * Some Turbo features
+
+  https://user-images.githubusercontent.com/17977331/151323477-18bb40ee-6b20-4ebc-9512-30cc41187d6b.mov
+
+</details>
