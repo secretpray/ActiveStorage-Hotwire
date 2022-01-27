@@ -15,8 +15,6 @@
 
   * ./bin/rails tailwindcss:install
 
-  * redis-server --daemonize yes
-
   * yarn install --check-files
 
   * redis-server --daemonize yes
