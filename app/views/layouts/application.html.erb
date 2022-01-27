@@ -14,10 +14,11 @@
   <body class=>
     <%= render 'shared/navigation' %>
     <main class="container max-w-5xl mx-auto mt-28 px-5 flex flex-col">
+
       <div id='notifications'>
         <%= render 'shared/flash' %>
       </div>
-  
+
       <%= yield %>
     </main>
   </body>
