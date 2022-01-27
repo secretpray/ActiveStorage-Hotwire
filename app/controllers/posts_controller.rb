@@ -17,32 +17,6 @@ class PostsController < ApplicationController
   def edit; end
 
   def create
-    # debugger
-    # if params[:post][:videos].present? && params[:post][:videos].is_a?(Array)
-    #   videos = params[:post][:videos].compact_blank
-    #   videos.each do |video|
-    #     movie = FFMPEG::Movie.new(video.tempfile.path)
-    #     params.merge(metadata: { duration: movie.duration, video_codec: movie.video_codec })
-    #   end
-    # elsif params[:post][:videos].present?
-    #   video = params[:post][:videos]
-    #   movie = FFMPEG::Movie.new(video.tempfile.path)
-    #   params.merge(metadata: { duration: movie.duration, video_codec: movie.video_codec })
-    # end
-    #
-    # if params[:post][:images].present? && params[:post][:images].is_a?(Array)
-    #   images = params[:post][:images].compact_blank
-    #   images.each do |image|
-    #     # img = FFMPEG::Movie.new(image.tempfile.path)
-    #     # img = FFMPEG::Movie.new(image.tempfile.path)
-    #     params.merge(metadata: { content_type: image.content_type })
-    #   end
-    # elsif params[:post][:images].present?
-    #   image = params[:post][:images]
-    #   # img = FFMPEG::Movie.new(image.tempfile.path)
-    #   params.merge(metadata: { content_type: image.content_type })
-    # end
-
     @post = current_user.posts.build(post_params)
 
     respond_to do |format|
@@ -99,5 +73,4 @@ class PostsController < ApplicationController
                                    videos: []
                                   )
     end
-
 end
