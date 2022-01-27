@@ -1,0 +1,21 @@
+<%= turbo_stream_from :posts %>
+<%= turbo_stream_from [current_user, :posts] %>
+
+<div class="w-full">
+  <div class="items-center">
+    <div class='text-center mb-2 opacity-70 hover:opacity-90 transition duration-300 cursor-pointer'> 
+      <%= Time.zone.now.strftime("%A, %D: %k:%M:%S.%L") %>
+    </div>
+    <div class="flex justify-between  items-center">
+      <h1 class="font-bold text-4xl">Posts</h1>
+      <%= link_to 'New post', new_post_path,
+                  id: 'btn-sky-new-post',
+                  class: "ml-2 whitespace-nowrap inline-flex items-center justify-center px-4 py-2 border border-transparent rounded-md shadow-sm text-base font-medium text-white focus:opacity-90 transition duration-300",
+                  data: { turbo_frame: :posts } %>
+    </div>
+  </div>
+
+  <%= turbo_frame_tag :posts, class: "min-w-full flex flex-col" do %>
+    <%= render @posts %>
+  <% end %>
+</div>

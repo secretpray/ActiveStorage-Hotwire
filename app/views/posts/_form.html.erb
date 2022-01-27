@@ -1,0 +1,32 @@
+<%= form_with model: post, class: "contents", id: dom_id(post), target: :_top do |form| %>
+  <%= render 'shared/errors', form: form %>
+
+  <div class="my-5">
+    <%= form.label :title %>
+    <%= form.text_field :title, class: "block shadow rounded-md border border-gray-200 outline-none px-3 py-2 mt-2 w-full" %>
+  </div>
+
+  <div class="my-5">
+    <%= form.label :body %>
+    <%= form.rich_text_area :body, class: "block shadow rounded-md border border-gray-200 outline-none px-3 py-2 mt-2 w-full" %>
+  </div>
+
+  <div class="my-5">
+    <%= form.label :images %>
+    <%= form.file_field :images,
+        class: "block shadow rounded-md border border-gray-200 outline-none px-3 py-2 mt-2 w-full",
+        accept: 'image/png, image/gif, image/jpeg, image/jpg', multiple: true %>
+  </div>
+
+  <div class="my-5">
+    <%= form.label :videos %>
+    <%= form.file_field :videos,
+        class: "block shadow rounded-md border border-gray-200 outline-none px-3 py-2 mt-2 w-full",
+        multiple: true %>
+  </div>
+
+  <div class="flex mt-5">
+    <%= link_to "Cancel", posts_path, class: 'whitespace-nowrap px-4 py-2 text-base font-medium text-gray-500 rounded-md hover:text-gray-900 hover:bg-gray-200 focus:opacity-90 transition duration-300' %>
+    <%= form.submit set_title(form.object), class: 'ml-2 whitespace-nowrap inline-flex items-center justify-center px-4 py-2 border border-transparent rounded-md shadow-sm text-base font-medium text-white bg-sky-500 hover:bg-sky-600 focus:opacity-90 transition duration-300' %>
+  </div>
+<% end %>

@@ -1,0 +1,30 @@
+blockquote {
+  border-left-width: 8px;
+  border-color: rgb(14 165 233);
+  /* border-color: rgb(14 116 144); */
+  /* border-color: rgb(2 132 199); */
+  /* border-color: rgb(3 105 161); */
+}
+
+#btn-sky-new-post {
+  border-radius: 7px;
+  border-width: 3px;
+  border-color: rgb(14 165 233);
+  color: rgb(14 165 233);
+  background-color: transparent;
+}
+
+#btn-sky-new-post:hover {
+  border-color: rgb(2 132 199);
+  background-color: rgb(2 132 199);
+  color: white;
+}
+
+.btn-outline-sky-back{
+  opacity: .5;
+}
+
+.btn-outline-sky-back:hover {
+  color: rgb(14 165 233);
+  opacity: 1;
+}

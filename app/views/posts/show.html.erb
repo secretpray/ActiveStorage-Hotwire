@@ -1,0 +1,9 @@
+<%= turbo_frame_tag :posts, class: "mx-auto md:w-2/3" do %>
+  <%= render @post %>
+
+  <div class="mt-3 flex">
+    <%= link_to 'Back', posts_path,
+                        class: 'btn-outline-sky-back whitespace-nowrap px-4 py-2 text-base font-medium text-gray-500 rounded-md hover:text-gray-900 hover:bg-gray-200 focus:opacity-90 transition duration-300',
+                        data: { turbo_frame: :posts} %>
+  </div>
+<% end %>
